@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins&family=Rubik&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+/* roots */
+:root {
+    --accent-orange: #E94F1C;
+    --accent-dark: rgba(0,0,0,0.8);
+    --standard-white: rgba(255,255,255,0.8);
+    --main-font: "Bebas Neue", sans-serif;
+    --accent-font: "Poppins", sans-serif;
+}
+
+body {
+    background-color: rgba(250, 250, 250, 0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--accent-dark);
+    margin: 0;
+}
+/* navbar css */
+.nav-bar {
+    width: 100%;
+    height: 7rem;
+    background-color: var(--accent-orange);
+    display: flex;
+}
+.logo-container {
+    height: inherit;
+    width: 40%;
+}
+.navlink-container {
+    font-family: var(--main-font);
+    height: inherit;
+    width: 60%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.navlink {
+    text-decoration: none;
+    color: var(--standard-white);
+    font-size: 3.5vh;
+}
+.navlink:hover {
+    cursor: pointer;
+    color: var(--accent-orange);
+}
+/* navbar css */
+/* Landing css */
+.landing {
+    width: 100%;
+    justify-content: space-evenly; 
+}
+.landing-text {
+    margin-left: 5%;
+    font-family: var(--accent-font);
+    padding: 1rem;
+}
+.pic-container {
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    color: var(--accent-orange);
+    font-family: var(--main-font);
+    
+}
+.main-title {
+    font-size: 6.5vh;    
+}
+.main-subtitle {
+    font-size: 5vh;
+}
+.main-container {
+    margin-top: 3rem;
+}
+.labo-ai {
+    background-image: url(labo-ai.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 25%;
+    aspect-ratio: 6/5;
+    transform: skew(-10deg);
+    border-radius: 3%;
+    z-index: 5;
+}
+.labo-ai::after {
+    content: '';
+    margin-top: 1%;
+    margin-left: -3%;
+    width: 10rem;
+    height: 15rem;
+    transform: skew(-10deg);
+    position: absolute;
+    border: 1px solid var(--accent-orange);
+    border-radius: 5%;
+    z-index: -5;
+}
+/* Landing css */
+/* countdown css */
+.countdown-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-weight: 700;
+    font-family: var(--accent-font);
+}
+.time-con {
+    margin: 2rem;
+    margin-top: -2rem;
+}
+
+p {
+    font-family: var(--accent-font);
+    width: auto;
+    font-size: 8vh;
+    padding: 2rem;
+    border: 3px solid var(--accent-orange);
+}
+/* countdown css */
+
+
