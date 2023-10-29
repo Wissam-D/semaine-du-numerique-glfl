@@ -29,11 +29,32 @@ body {
     height: 7rem;
     background-color: var(--solid-white);
     display: flex;
+    column-gap: 8%;
     position: fixed;
 }
 .logo-container {
     height: inherit;
-    width: 40%;
+    width: 50%;
+    display: flex;
+    column-gap: 10%;
+    
+}
+.logo-container > * {
+    background-size: 4.5em;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 6rem;
+    overflow: visible;
+}
+.logo-container > *:nth-child(1) {
+    background-image: url(assets/glfl.svg);
+    margin-left: 5%;
+}
+.logo-container > *:nth-child(2) {
+    background-image: url(assets/mlf.svg);
+}
+.logo-container > *:nth-child(3) {
+    background-image: url(assets/aefe.svg);
 }
 .mobile-toggle {
     display: none;
@@ -41,7 +62,7 @@ body {
 .navlink-container {
     font-family: var(--main-font);
     height: inherit;
-    width: 60%;
+    width: 50%;
     display: flex;
     align-items: center;
     column-gap: 15%;
@@ -251,6 +272,11 @@ p {
 @media (min-width: 450px) {
     .labo-ai {
         transform: skew(-7deg);
+    }
+}
+@media (max-width: 700px) {
+    .logo-container > * {
+        background-size: 3.5em;
     }
 }
 /* navigation responsive handling */
