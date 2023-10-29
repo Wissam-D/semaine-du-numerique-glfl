@@ -99,6 +99,7 @@ body {
     width: 20rem;
     aspect-ratio: 6/5;
     border-radius: 8%;
+    z-index: -1;
 }
 .labo-ai::after {
     content: '';
@@ -144,7 +145,46 @@ p {
     align-items: center;
     justify-content: center;
 }
-/* countdown css */
+/* Gassing up la spe NSI part */
+.nsi {
+    color: var(--solid-white);
+    font-family: var(--accent-font);
+    margin-top: 3%;
+    width: 100%;
+    height: max-content;
+    padding: 3rem;
+    background-color: var(--accent-dark);
+    
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+    
+}
+.nsi-text {
+    width: 75%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+   
+}
+.nsi-text > * {
+    background-color: #092f38;
+    padding: 1rem; 
+    border-radius: 1%;
+}
+.nsi-icon {
+    background-image: url(assets/binary.png);
+    background-repeat: no-repeat;
+    aspect-ratio: 1/1;
+    width: 5em;
+    position: absolute;
+    left: 2%;
+    top: 5%;
+}
 /* navigation responsive handling */
 @media (max-width: 50rem) {
     .navlink-container {
@@ -161,6 +201,7 @@ p {
 
         transform: translateX(100%);
         transition: transform 800ms ease-in-out;
+        z-index: 3000;
     }
     .navlink-container[data-visible="true"] {
         transform: translateX(0%);
@@ -174,7 +215,7 @@ p {
     }
     .mobile-toggle {
         display: inline-block;
-        z-index: 1000;
+        z-index: 5000;
         position: absolute;
         top: 1rem;
         right: 4rem;
