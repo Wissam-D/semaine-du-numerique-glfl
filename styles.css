@@ -7,9 +7,10 @@
 /* roots */
 :root {
     --accent-orange: #E94F1C;
-    --accent-dark: rgba(0,0,0,0.8);
+    --accent-dark: #043C48;
+    --primary-dark: rgba(0,0,0,0.8);
     --standard-white: rgba(255,255,255,0.9);
-    --solid-white: rgba(255,255,255,1);
+    --solid-white: rgba(255,255,255,0.9);
     --main-font: "Bebas Neue", sans-serif;
     --accent-font: "Poppins", sans-serif;
 }
@@ -70,8 +71,10 @@ body {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
+    
     color: var(--accent-orange);
     font-family: var(--main-font);
+
 }
 .main-title {
     font-size: 6.5vh;    
@@ -87,30 +90,37 @@ body {
     background-image: url(assets/labo-ai.jpg);
     background-size: cover;
     background-position: center;
-    width: 25%;
+    width: 35%;
     aspect-ratio: 6/5;
     border-radius: 3%;
 }
 .labo-ai::after {
     content: '';
     width: 10em;
-    height: 15em;
+    height: 22em;
     position: absolute;
     border: 1px solid var(--accent-orange);
     border-radius: 5%;
     z-index: -1;
-    margin-left: -1rem;
+    margin-left: -2rem;
     margin-top: 1%;
     transform: skew(-5deg);
 }
 /* Landing css */
 /* countdown css */
 .countdown-container {
+    width: 100%;
+    height: max-content;
+    padding: 1.5rem;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
     justify-content: center;
     font-weight: 700;
     font-family: var(--accent-font);
+}
+.countdown-container > * {
+    flex-basis: 13%;
 }
 .time-con {
     margin: 2rem;
@@ -123,6 +133,10 @@ p {
     padding: 2rem;
     border: 3px solid var(--accent-orange);
     margin-bottom: 0rem;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 /* countdown css */
 /* navigation responsive handling */
@@ -156,20 +170,31 @@ p {
         display: inline-block;
         z-index: 1000;
         position: absolute;
-        top: 5%;
-        right: 5%;
-        width: 3.5rem;
+        top: 1rem;
+        right: 4rem;
+        width: 2rem;
         aspect-ratio: 1;
         border: 0;
         background-image: url(assets/icon-hamburger.png);
+        background-size: cover;
         background-color: transparent;
+        cursor: pointer;
     }
     .mobile-toggle[aria-expanded="true"] {
         background-image: url(assets/icon-closed.png);
     }
-    span {
+    .sr-only {
         display: none;
     }
 }
-
+@media (max-width: 450px) {
+    .countdown-container > * {
+        flex: 0 1 50%;
+        flex-wrap: nowrap;
+        flex-direction: row;
+    }
+    .time-vanish {
+        display: none;
+    }
+}
 /* navigation responsive handling */
