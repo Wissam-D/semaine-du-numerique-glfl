@@ -69,42 +69,48 @@ body {
 .pic-container {
     padding: 1rem;
     width: 100%;
+    height: fit-content;
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
     
     color: var(--accent-orange);
     font-family: var(--main-font);
-
 }
+
 .main-title {
-    font-size: 6.5vh;    
+    font-size: 3em;    
 }
 .main-subtitle {
-    font-size: 5vh;
+    font-size: 2em;
 }
 .main-container {
-    margin-top: 3rem;
+    margin-top: -1rem;
+    padding: 1.5em;
 }
 .labo-ai {
-    content: '';
+    position: relative;
+    transform: perspective(3000px);
+    transform-style: preserve-3d;
+
     background-image: url(assets/labo-ai.jpg);
     background-size: cover;
     background-position: center;
-    width: 35%;
+    width: 20rem;
     aspect-ratio: 6/5;
-    border-radius: 3%;
+    border-radius: 8%;
 }
 .labo-ai::after {
     content: '';
-    width: 10em;
-    height: 22em;
+    width: 100%;
+    height: 100%;
     position: absolute;
     border: 1px solid var(--accent-orange);
-    border-radius: 5%;
-    z-index: -1;
-    margin-left: -2rem;
-    margin-top: 1%;
-    transform: skew(-5deg);
+    border-radius: inherit;
+    margin-left: -1.4rem;
+    margin-top: 2%;
+
+    transform: translateZ(-50px);
 }
 /* Landing css */
 /* countdown css */
@@ -195,6 +201,15 @@ p {
     }
     .time-vanish {
         display: none;
+    }
+    p {
+        font-size: 5vh;
+        padding: 1rem;
+    }
+}
+@media (min-width: 450px) {
+    .labo-ai {
+        transform: skew(-7deg);
     }
 }
 /* navigation responsive handling */
