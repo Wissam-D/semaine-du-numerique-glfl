@@ -29,15 +29,14 @@ body {
     height: 7rem;
     background-color: var(--solid-white);
     display: flex;
-    column-gap: 8%;
+    column-gap: 3vw;
     position: fixed;
 }
 .logo-container {
     height: inherit;
     width: 50%;
     display: flex;
-    column-gap: 10%;
-    
+    column-gap: 3vw;
 }
 .logo-container > * {
     background-size: 4.5em;
@@ -267,6 +266,12 @@ p {
     p {
         font-size: 5vh;
         padding: 1rem;
+    }
+    .logo-container > * {
+        background-size: 5em;
+    }
+    .logo-container {
+        column-gap: 0;
     }
 }
 @media (min-width: 450px) {
